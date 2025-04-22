@@ -1,0 +1,29 @@
+<h1>Enter your City, State or Zip</h1>
+
+<%= form_with model: @address, url: forecast_path, method: :post do |form| %>
+  <% if @address.errors.any? %>
+    <div>
+      <ul>
+        <% @address.errors.full_messages.each do |message| %>
+          <li style="color:red"><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>Currently supporting only US zip codes only</p>
+  <div>
+    <%= form.label :zip %>
+    <%= form.text_field :zip %>
+  </div>
+
+  <%= form.submit "Submit" %>
+<% end %>
+
+<% if @forecast.present? %>
+  <h2>Weather Forecast</h2>
+  <% if @cached %>
+    <h3>Data is from cache. Will refresh after 30 minutes.</h3
+  <% end %>
+  <p><%= @forecast %></p> <!-- Customize this based on how forecast data looks -->
+<% end %>
