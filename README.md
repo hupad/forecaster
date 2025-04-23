@@ -1,10 +1,9 @@
 # Tools and versions
 
-Ruby Version - 3.2.2
-Rails Version - 6.1.7
-Database: Postgres 17
-
-External Api - [Open weather](https://openweathermap.org/api/one-call-3#weather_overview_how)
+- Ruby Version - 3.2.2
+- Rails Version - 6.1.7
+- Database: Postgres 17
+- External Api - [Open weather](https://openweathermap.org/api/one-call-3#weather_overview_how)
 
 # Code Setup
 ```
