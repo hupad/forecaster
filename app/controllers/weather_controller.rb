@@ -4,10 +4,10 @@ class WeatherController < ApplicationController
   end
 
   def forecast
-    @address = Address.new(permit_params)
+    @address = Address.new(address_params)
 
     if @address.valid?
-      result = OpenWeatherApiService.new(permit_params).call
+      result = OpenWeatherApiService.new(address_params).call
       @forecast = result[:data]
       @cached = result[:cached]
     end
@@ -20,7 +20,7 @@ class WeatherController < ApplicationController
 
   private
 
-  def permit_params
+  def address_params
     params.require(:address).permit(:zip)
   end
 end
