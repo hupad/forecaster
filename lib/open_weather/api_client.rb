@@ -1,6 +1,6 @@
 module OpenWeather
   module ApiClient
-    API_KEY = ENV.fetch("OPEN_WEATHER_API_KEY", "12908c39e26307fc22d835c57e87831d" )
+    API_KEY = ENV.fetch("OPEN_WEATHER_API_KEY", "123" )
     BASE_URL = "http://api.openweathermap.org"
 
     def connection

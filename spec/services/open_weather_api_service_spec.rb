@@ -20,7 +20,7 @@ RSpec.describe OpenWeatherApiService do
       })
 
       stub_request(
-        :get, "http://api.openweathermap.org/data/3.0/onecall/overview?lat=#{lat_lon[0]}&lon=#{lat_lon[1]}&appid=12908c39e26307fc22d835c57e87831d")
+        :get, "http://api.openweathermap.org/data/3.0/onecall/overview?lat=#{lat_lon[0]}&lon=#{lat_lon[1]}&appid=123")
         .to_return(body: {
           "lat": 51.509865,
           "lon": -0.118092,
